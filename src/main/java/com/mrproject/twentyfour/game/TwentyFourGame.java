@@ -13,14 +13,25 @@ public class TwentyFourGame {
 
     private Integer[] number = new Integer[10];
     private int count = 0;
+    private int score = 0;
 
+    public TwentyFourGame() {
+        this.count = 0;
+        this.score = 0;
+        this.setGame();
+    }
     public void setGame() {
-        
+
         for (int i = 0; i < 9; i++) {
             this.number[i] = i + 1;
         }
         this.count = 0;
-        
+
+    }
+    
+    public void addScorePlayer()
+    {
+        this.score += 1;
     }
 
     public int showRandomNumber() {
@@ -40,4 +51,15 @@ public class TwentyFourGame {
         } while (i == 10 && count == 10);
         return 0;
     }
+
+    private boolean checkTwentyFour(int numb1, int numb2, int numb3, int numb4) {
+        int checkNumber[] = {numb1,numb2,numb3,numb4};
+        if (checkNumber[0] == 0 || checkNumber[1] == 0 || checkNumber[2] == 0 || checkNumber[3] == 0) {
+            return false;
+        }
+        
+        return true;
+
+    }
+
 }
