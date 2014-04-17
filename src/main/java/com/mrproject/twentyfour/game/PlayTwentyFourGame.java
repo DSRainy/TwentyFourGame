@@ -5,6 +5,8 @@
  */
 package com.mrproject.twentyfour.game;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Rain
@@ -24,6 +26,20 @@ public class PlayTwentyFourGame {
         number[2] = player3.showRandomNumber();
         number[3] = player4.showRandomNumber();
         showNumber(number);
+
+        Scanner input = new Scanner(System.in);
+        String answer;
+        String[] calAnswer = null;
+        answer = input.next();
+        for (int i = 0; i < answer.length(); i++) {
+            calAnswer[i] = answer.substring(i, i+1);
+        }
+    
+
+     
+        
+        
+        
         
         
     }
